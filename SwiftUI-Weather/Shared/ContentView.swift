@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    @State private var isNight=false
+    
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.blue,.white]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue,isNight ? .gray : .white]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
             VStack{
                 Text("Izmir")
                     .font(.system(size:32,weight: .medium,design:.default))
@@ -42,7 +46,7 @@ struct ContentView: View {
                     Spacer()
                     
                     Button{
-                        print("tapped")
+                        isNight.toggle()
                     } label: {
                         Text("Change Day Time")
                             .frame(width:280, height:50)
