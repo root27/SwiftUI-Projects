@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7103B869297C5FA300911FE1 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7103B868297C5FA300911FE1 /* ItemModel.swift */; };
+		7103B86C297C6DB700911FE1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7103B86B297C6DB700911FE1 /* ListViewModel.swift */; };
 		718AF625297C2F1F0046F9DB /* SwiftUI_ToDo_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AF615297C2F1D0046F9DB /* SwiftUI_ToDo_ListApp.swift */; };
 		718AF626297C2F1F0046F9DB /* SwiftUI_ToDo_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AF615297C2F1D0046F9DB /* SwiftUI_ToDo_ListApp.swift */; };
 		718AF629297C2F1F0046F9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718AF617297C2F1F0046F9DB /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7103B868297C5FA300911FE1 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		7103B86B297C6DB700911FE1 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		718AF615297C2F1D0046F9DB /* SwiftUI_ToDo_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ToDo_ListApp.swift; sourceTree = "<group>"; };
 		718AF617297C2F1F0046F9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		718AF61C297C2F1F0046F9DB /* SwiftUI-ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7103B867297C5F8900911FE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7103B868297C5FA300911FE1 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7103B86A297C6D0F00911FE1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7103B86B297C6DB700911FE1 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		718AF60F297C2F1D0046F9DB = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +77,8 @@
 		718AF614297C2F1D0046F9DB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7103B86A297C6D0F00911FE1 /* ViewModels */,
+				7103B867297C5F8900911FE1 /* Models */,
 				718AF615297C2F1D0046F9DB /* SwiftUI_ToDo_ListApp.swift */,
 				718AF633297C48A00046F9DB /* Views */,
 				718AF617297C2F1F0046F9DB /* Assets.xcassets */,
@@ -189,7 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7103B869297C5FA300911FE1 /* ItemModel.swift in Sources */,
 				718AF63B297C4FB50046F9DB /* AddView.swift in Sources */,
+				7103B86C297C6DB700911FE1 /* ListViewModel.swift in Sources */,
 				718AF625297C2F1F0046F9DB /* SwiftUI_ToDo_ListApp.swift in Sources */,
 				718AF637297C48FB0046F9DB /* ListView.swift in Sources */,
 				718AF639297C4BC20046F9DB /* ListRowView.swift in Sources */,

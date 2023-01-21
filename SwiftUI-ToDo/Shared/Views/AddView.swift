@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AddView: View {
     
-    
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var listViewModel: ListViewModel
     @State var textString: String = ""
     
     var body: some View {
@@ -22,7 +23,7 @@ struct AddView: View {
                     .background(Color(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)))
                     .cornerRadius(10)
                 
-                Button(action: {}, label: {
+                Button(action: saveButtonPressed, label: {
                     Text("Save")
                         .font(.headline)
                         .frame(height:55)
@@ -37,6 +38,11 @@ struct AddView: View {
         }
         .navigationTitle("Add Item 🪄")
     }
+    
+    func saveButtonPressed(){
+        listViewModel.addItem(title: textString)
+        presentationMode.wrappedValue.dismiss()
+    }
 }
 
 struct AddView_Previews: PreviewProvider {
@@ -44,5 +50,6 @@ struct AddView_Previews: PreviewProvider {
         NavigationView{
         AddView()
         }
+        .environmentObject(ListViewModel())
     }
 }
